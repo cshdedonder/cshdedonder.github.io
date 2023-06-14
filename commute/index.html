@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1>Commute Overview</h1>
-        <p id="commuteLiefkenshoekData">Reistijd via Liefkenshoektunnel: ?</p>
-        <p id="commuteKennedyData">Reistijd via Kennedytunnel: ?</p>
-        <div id="commuteLiefkenshoekMap" style="width:100%;height:400px;"></div>
-        <div id="commuteKennedyMap" style="width:100%;height:400px;"></div>
-        <script src="script.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4DB5sqOztb5oGAY0D84KmsJSkP781WAI&callback=initMaps"></script>
-    </body>
-    <div id="output"></div>
+
+<head>
+    <style>
+        .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            border: 10px solid gray;
+        }
+
+        .grid-item {
+            border: 10px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Commute Overview</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2">Kennedytunnel</th>
+                <th colspan="2">Liefkenshoektunnel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thuis -&gt; Werk</td>
+                <td><span id="twkt"></span></td>
+                <td><span id="twkd"></span></td>
+                <td><span id="twlt"></span></td>
+                <td><span id="twld"></span></td>
+            </tr>
+            <tr>
+                <td>Werk -&gt; Thuis</td>
+                <td><span id="wtkt"></span></td>
+                <td><span id="wtkd"></span></td>
+                <td><span id="wtlt"></span></td>
+                <td><span id="wtld"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="grid-container">
+        <div id="commuteKennedyMapTW" style="width:400px;height:400px;" class="grid-item"></div>
+        <div id="commuteLiefkenshoekMapTW" style="width:400px;height:400px;" class="grid-item"></div>
+        <div id="commuteKennedyMapWT" style="width:400px;height:400px;" class="grid-item"></div>
+        <div id="commuteLiefkenshoekMapWT" style="width:400px;height:400px;" class="grid-item"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4DB5sqOztb5oGAY0D84KmsJSkP781WAI&callback=initMaps"></script>
+
+
+</body>
+
 </html>
