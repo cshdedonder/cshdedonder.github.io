@@ -10,6 +10,8 @@ function initMaps() {
         center: new google.maps.LatLng(51.254109, 4.298360),
         zoom: 11,
         disableDefaultUI: true,
+        gestureHandling: "none",
+        zoomControl: false,
     };
     
     const mapLiefkenshoekTW = new google.maps.Map(document.getElementById("commuteLiefkenshoekMapTW"), mapOptions);
