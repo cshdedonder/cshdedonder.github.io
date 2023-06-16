@@ -52,9 +52,13 @@
 
 
     <script src="script.js"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4DB5sqOztb5oGAY0D84KmsJSkP781WAI&callback=initMaps"></script>
+    <script>
+        (function () {
+            var src = "https://maps.googleapis.com/maps/api/js?key=" + getURLParameter("key") + "&callback=initMaps";
+            document.write('<script src="' + src + '"><\/script>');
 
+        })();
+    </script>
 
 </body>
 
