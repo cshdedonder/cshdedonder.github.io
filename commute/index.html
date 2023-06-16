@@ -2,17 +2,7 @@
 <html>
 
 <head>
-    <style>
-        .grid-container {
-            display: inline-grid;
-            grid-template-columns: auto auto;
-            border: 10px solid gray;
-        }
-
-        .grid-item {
-            border: 10px solid gray;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -56,7 +46,6 @@
         (function () {
             var src = "https://maps.googleapis.com/maps/api/js?key=" + getURLParameter("key") + "&callback=initMaps";
             document.write('<script src="' + src + '"><\/script>');
-
         })();
     </script>
 
